@@ -6,6 +6,15 @@ import mplfinance as mpf
 import psycopg2
 from psycopg2 import sql
 from datetime import datetime, timedelta
+import os
+
+# Vercel deployment configuration
+if os.getenv('VERCEL_ENV'):
+    # Set Streamlit configuration for Vercel
+    os.environ['STREAMLIT_SERVER_HEADLESS'] = 'true'
+    os.environ['STREAMLIT_SERVER_PORT'] = os.environ.get('PORT', '8501')
+    os.environ['STREAMLIT_SERVER_ENABLE_CORS'] = 'false'
+    os.environ['STREAMLIT_BROWSER_GATHER_USAGE_STATS'] = 'false'
 
 st.set_page_config(
     page_title="Stock Analysis Dashboard",
@@ -13,8 +22,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        'Get Help': 'https://github.com/your-repo',
-        'Report a bug': 'https://github.com/your-repo/issues',
+        'Get Help': 'https://github.com/hungdotnet/chart_stock',
+        'Report a bug': 'https://github.com/hungdotnet/chart_stock/issues',
         'About': '''
         # Stock Analysis Dashboard
         Professional stock analysis tool with PostgreSQL integration.

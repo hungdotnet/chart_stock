@@ -1,26 +1,13 @@
 {
   "name": "chart-stock",
   "version": "1.0.0",
-  "description": "Professional Stock Analysis Dashboard with PostgreSQL integration",
-  "main": "app.py",
+  "description": "Professional Stock Analysis Dashboard",
   "scripts": {
-    "dev": "streamlit run app.py --server.port $PORT --server.headless true --server.runOnSave true",
-    "start": "streamlit run app.py --server.port $PORT --server.headless true --server.runOnSave true",
-    "build": "echo 'No build step required'"
+    "dev": "streamlit run app.py",
+    "start": "streamlit run app.py",
+    "build": "echo 'Build complete'"
   },
-  "dependencies": {},
-  "devDependencies": {},
   "engines": {
-    "node": ">=14.0.0",
-    "python": ">=3.8.0"
-  },
-  "keywords": [
-    "stock",
-    "analysis",
-    "dashboard",
-    "streamlit",
-    "postgresql"
-  ],
-  "author": "hungdotnet",
-  "license": "MIT"
+    "python": "3.9"
+  }
 }
