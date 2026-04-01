@@ -1,0 +1,40 @@
+# Vercel deployment ignore file
+# Files and directories to exclude from deployment
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Test files (optional - remove if you want to keep tests)
+test_*.py
+*_test.py
+
+# Development files
+README_POSTGRES.md
+setup_database.sql
+test_docker_postgres.py
+test_import.py
+test_postgres.py
+test_query_fix.py
